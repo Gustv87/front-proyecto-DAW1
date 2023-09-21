@@ -133,6 +133,7 @@ export const Reserva = () => {
         <table className="table">
           <thead className="table-dark">
             <tr>
+            <th>id_reserva</th>
               <th>Id_ lab</th>
               <th>id_horario</th>
               <th>id_usuario</th>
