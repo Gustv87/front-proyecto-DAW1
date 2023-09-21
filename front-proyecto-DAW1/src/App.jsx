@@ -1,20 +1,25 @@
 import { Reserva } from './Componentes/Reserva'
-import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react';
 
 
 function App() {
 
+  const [inicioSesion, setInicioSesion] = useState(false);
+  const [id_rol, setId_rol] = useState(0);
+
+
+  const onInicioSesion = (val) => {
+    console.log(val);
+    setId_rol(val);
+    setInicioSesion(val);
+  }
+
   return (
     <>
-    <Routes>
-
-    <Route path='/reserva' element={<Reserva />}  ></Route>
-    </Routes>
-             
+             <Route path='/reserva' element={<Reserva />}  ></Route>
 
     </>
-  );
+  )
 }
 
 export default App;
