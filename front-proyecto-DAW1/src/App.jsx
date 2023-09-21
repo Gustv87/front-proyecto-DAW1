@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Menu from "./components/menu/Menu"
 import "./App.css"
@@ -17,24 +18,23 @@ function App() {
     setId_rol(val);
     setInicioSesion(val);
   }
-  const App = () => {
-    return (
-      <>
+  return (
+    <>
+      <BrowserRouter>
         <Menu>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path='/reserva' element={<Reserva />}  ></Route>
-            </Routes>
-          </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path='/reserva' element={<Reserva />}  ></Route>
+          </Routes>
         </Menu>
+      </BrowserRouter>
 
 
 
-      </>
+    </>
 
-    )
-  }
+  )
 }
-  export default App
+
+export default App
 
