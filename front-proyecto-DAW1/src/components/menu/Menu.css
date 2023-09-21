@@ -1,0 +1,32 @@
+:root{
+    --primary: #111854;
+    --light: #ffffff;
+    --grey:#efefef;    
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333; /* Color de fondo del sidebar */
+    color: #fff; /* Color de texto en el sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sidebar li:hover {
+    background-color: #555; /* Color de fondo cuando se pasa el mouse */
+    cursor: pointer;
+  }
