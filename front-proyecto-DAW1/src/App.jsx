@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Menu from "./components/menu/Menu"
 import "./App.css"
 import Dashboard from './components/dashboard/Dashboard';
-import { Reserva } from './Componentes/Reserva'
+import { Reserva } from './components/Reserva'
 import { useState } from 'react';
 
 
@@ -21,12 +21,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Menu>
+        {/* <Menu> */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path='/reserva' element={<Reserva />}  ></Route>
           </Routes>
-        </Menu>
+        {/* </Menu> */}
       </BrowserRouter>
 
 

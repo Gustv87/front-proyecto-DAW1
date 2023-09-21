@@ -13,7 +13,7 @@ const Menu = () => {
                         <h4 className='text-light font-weight-bold'>Reservacion de Laboratorios</h4>
                     </div>
                     <div className="menu">
-                        <a href="#" className='d-block text-light p-3'><i className="bi bi-person me-2 lead"></i>Usuarios</a>
+                        <a to="/reserva" className='d-block text-light p-3'><i className="bi bi-person me-2 lead"></i>Usuarios</a>
                         <a href="#" className='d-block text-light p-3'><i className="bi bi-book me-2 lead"></i>Reservaciones</a>
                         <a href="#" className='d-block text-light p-3'><i className="bi bi-buildings me-2 lead"></i>Laboratorios</a>
                         <a href="#" className='d-block text-light p-3'><i className="bi bi-calendar-event me-2 lead"></i>Horarios</a>
