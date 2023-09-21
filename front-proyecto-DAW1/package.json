@@ -10,6 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+=======
     "axios": "^1.5.0",
         "bootstrap": "^5.3.1",
         "phosphor-react": "^1.4.1",
@@ -19,6 +27,7 @@
         "react-icon": "^1.0.0",
         "react-router-dom": "^6.15.0",
         "react-transition-group": "^4.4.5"
+>>>>>>> 4f546b9107b3084c78de6f80f9b7189160008ac1
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

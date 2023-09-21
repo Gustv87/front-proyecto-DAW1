@@ -1,0 +1,24 @@
+:root{
+    --primary: #111854;
+    --light: #ffffff;
+    --grey:#efefef;    
+}
+a{
+    text-decoration: none !important;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.bg-primary{
+}
+.sidebar-container{
+    background-color: var(--primary) !important;
+    min-height: 100vh;
+}
+.sidebar-container .logo{
+    padding: .875rem 1.25rem;
+}
+.sidebar-container .menu{
+    width: 18rem;
+}
