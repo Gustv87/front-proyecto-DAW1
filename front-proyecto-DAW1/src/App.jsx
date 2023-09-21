@@ -1,4 +1,5 @@
 import { Reserva } from './Componentes/Reserva'
+import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react';
 
 
@@ -6,10 +7,14 @@ function App() {
 
   return (
     <>
-             <Route path='/reserva' element={<Reserva />}  ></Route>
+    <Routes>
+
+    <Route path='/reserva' element={<Reserva />}  ></Route>
+    </Routes>
+             
 
     </>
-  )
+  );
 }
 
-export default App
+export default App;

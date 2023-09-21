@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { React, useEffect, useState } from 'react';
 
 let url = "http://localhost:3000/api/reservas";
 
