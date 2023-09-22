@@ -7,6 +7,7 @@ export const Reserva = () => {
   const [id_laboratorio, setLaborario] = useState([]);
   const [id_horario, setHorario] = useState([]);
   const [id_usuario, setUsuario] = useState([]);
+  const [SelectedHorario, setSelectedHorario] = useState("");
   const [fecha, setFecha] = useState();
 
   const getFecha = async () => {
@@ -74,20 +75,22 @@ export const Reserva = () => {
     }
   };
 
-
+  const handleHorarioChange = (event) => {
+    setSelectedHorario(event.target.value);
+  };
   const handleFechaChange = (event) => {
     setFecha(event.target.value);
   };
-  const postFecha = async (event) => {
+  const postHorario = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await fetch(url, {
+      const response = await fetch("http://localhost:3000/api/horarios", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({fecha,id_horario,id_laboratorio, id_usuario }), 
+        body: JSON.stringify({horarioinicio: SelectedHorario, horariofinal: SelectedHorario }), 
       });
 
       if (!response.ok) {
@@ -101,6 +104,7 @@ export const Reserva = () => {
       getUsuario
       // Limpiar los campos después de enviar
       setFecha();
+      setSelectedHorario("");
      setLaborario();
      setHorario();
      setUsuario();
@@ -114,8 +118,24 @@ export const Reserva = () => {
     <>
       <div className="container" style={{ maxWidth: "600px", margin: "0 auto", padding: "40px" }}>     
          <h1 className="text-center">Crear Reserva</h1>
-        <form onSubmit={postFecha}>
+        <form onSubmit={postHorario}>
           <div className="mb-3">
+          <label className="form-label">Horario</label>
+          <select
+            className="form-control"
+            value={SelectedHorario}
+            onChange={handleHorarioChange}
+          >
+            <option value="">Seleccionar Horario</option>
+            {horarios.map((horarios) => (
+              <option key={horarios.id} value={horarios.horarioinicio + horarios.horariofinal} >
+                {horarios.horarioinicio}
+                {horarios.horariofinal}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="mb-3">
             <label className="form-label">Fecha</label>
             <input
               type="date"
